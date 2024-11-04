@@ -44,8 +44,9 @@ Signed-off-by: Pawel Dembicki <paweldembicki@gmail.com>
 Acked-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: David S. Miller <davem@davemloft.net>
 ---
- drivers/net/usb/qmi_wwan.c | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/net/usb/qmi_wwan.c | 3 +
+ drivers/usb/serial/qcserial.c | 1 +
+ 2 file changed, 4 insertion(+)
 
 --- a/drivers/net/usb/qmi_wwan.c
 +++ b/drivers/net/usb/qmi_wwan.c
@@ -59,3 +60,13 @@ Signed-off-by: David S. Miller <davem@davemloft.net>
  	{QMI_FIXED_INTF(0x19d2, 0x2002, 4)},	/* ZTE (Vodafone) K3765-Z */
  	{QMI_FIXED_INTF(0x2001, 0x7e16, 3)},	/* D-Link DWM-221 */
  	{QMI_FIXED_INTF(0x2001, 0x7e19, 4)},	/* D-Link DWM-221 B1 */
+--- a/drivers/usb/serial/qcserial.c
++++ b/drivers/usb/serial/qcserial.c
+@@ -177,6 +177,9 @@ static const struct usb_device_id produc
+ 	{DEVICE_SWI(0x413c, 0x81cf)},   /* Dell Wireless 5819 */
+ 	{DEVICE_SWI(0x413c, 0x81d0)},   /* Dell Wireless 5819 */
+ 	{DEVICE_SWI(0x413c, 0x81d1)},   /* Dell Wireless 5818 */
++	{DEVICE_SWI(0x413c, 0x81d7)},	/* Dell Wireless 5821e */
+ 	{DEVICE_SWI(0x413c, 0x81d2)},   /* Dell Wireless 5818 */
+ 	{DEVICE_SWI(0x413c, 0x8217)},	/* Dell Wireless DW5826e */
+ 	{DEVICE_SWI(0x413c, 0x8218)},	/* Dell Wireless DW5826e QDL */
