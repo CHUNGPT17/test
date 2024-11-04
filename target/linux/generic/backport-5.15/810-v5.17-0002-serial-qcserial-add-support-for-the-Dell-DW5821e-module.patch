@@ -1,7 +1,7 @@
 
 --- a/drivers/usb/serial/qcserial.c
 +++ b/drivers/usb/serial/qcserial.c
-@@ -1318,6 +1318,9 @@ static const struct usb_device_id produc
+@@ -177,6 +177,9 @@ static const struct usb_device_id produc
  	{DEVICE_SWI(0x413c, 0x81cf)},   /* Dell Wireless 5819 */
  	{DEVICE_SWI(0x413c, 0x81d0)},   /* Dell Wireless 5819 */
  	{DEVICE_SWI(0x413c, 0x81d1)},   /* Dell Wireless 5818 */
