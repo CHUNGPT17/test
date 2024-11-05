@@ -1,0 +1,54 @@
+From 6efbbb17d6c20c0b648fa2782c7d688e6f2e0107 Mon Sep 17 00:00:00 2001
+From: CHUNGSEV <chung24091990@gmail.com>
+Date: Tue, 5 Nov 2024 09:11:38 +0000
+Subject: [PATCH] add-driver-card-4G
+
+---
+ drivers/net/usb/qmi_wwan.c    | 3 +++
+ drivers/usb/serial/option.c   | 2 ++
+ drivers/usb/serial/qcserial.c | 2 ++
+ 3 files changed, 7 insertions(+)
+
+diff --git a/drivers/net/usb/qmi_wwan.c b/drivers/net/usb/qmi_wwan.c
+index 71ee7a3..f17f925 100644
+--- a/drivers/net/usb/qmi_wwan.c
++++ b/drivers/net/usb/qmi_wwan.c
+@@ -1318,6 +1318,9 @@ static const struct usb_device_id products[] = {
+ 	{QMI_FIXED_INTF(0x19d2, 0x1426, 2)},	/* ZTE MF91 */
+ 	{QMI_FIXED_INTF(0x19d2, 0x1428, 2)},	/* Telewell TW-LTE 4G v2 */
+ 	{QMI_FIXED_INTF(0x19d2, 0x1432, 3)},	/* ZTE ME3620 */
++	{QMI_FIXED_INTF(0x19d2, 0x1485, 5)},	/* ZTE MF286D */
++	{QMI_QUIRK_SET_DTR(0x1c9e, 0x9b05, 4)},	/* Longsung U8300 */
++	{QMI_QUIRK_SET_DTR(0x1c9e, 0x9b3c, 4)},	/* Longsung U9300 */
+ 	{QMI_FIXED_INTF(0x19d2, 0x2002, 4)},	/* ZTE (Vodafone) K3765-Z */
+ 	{QMI_FIXED_INTF(0x2001, 0x7e16, 3)},	/* D-Link DWM-221 */
+ 	{QMI_FIXED_INTF(0x2001, 0x7e19, 4)},	/* D-Link DWM-221 B1 */
+diff --git a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
+index d34458f..56941d3 100644
+--- a/drivers/usb/serial/option.c
++++ b/drivers/usb/serial/option.c
+@@ -2288,6 +2288,8 @@ static const struct usb_device_id option_ids[] = {
+ 	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },
+ 	{ USB_DEVICE(0x0489, 0xe0b5),						/* Foxconn T77W968 ESIM */
+ 	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },
++	{ USB_DEVICE(0x413c, 0x81d9),						/* Foxconn DW5820e */
++	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },	
+ 	{ USB_DEVICE_INTERFACE_CLASS(0x0489, 0xe0da, 0xff),                     /* Foxconn T99W265 MBIM variant */
+ 	  .driver_info = RSVD(3) | RSVD(5) },
+ 	{ USB_DEVICE_INTERFACE_CLASS(0x0489, 0xe0db, 0xff),			/* Foxconn T99W265 MBIM */
+diff --git a/drivers/usb/serial/qcserial.c b/drivers/usb/serial/qcserial.c
+index 703a9c5..132cb5a 100644
+--- a/drivers/usb/serial/qcserial.c
++++ b/drivers/usb/serial/qcserial.c
+@@ -184,6 +184,8 @@ static const struct usb_device_id id_table[] = {
+ 	{DEVICE_SWI(0x413c, 0x81d0)},   /* Dell Wireless 5819 */
+ 	{DEVICE_SWI(0x413c, 0x81d1)},   /* Dell Wireless 5818 */
+ 	{DEVICE_SWI(0x413c, 0x81d2)},   /* Dell Wireless 5818 */
++	{DEVICE_SWI(0x413c, 0x81d9)},   /* Dell Wireless 5820e */	
++	{DEVICE_SWI(0x413c, 0x81d7)},   /* Dell Wireless 5821e */	
+ 	{DEVICE_SWI(0x413c, 0x8217)},	/* Dell Wireless DW5826e */
+ 	{DEVICE_SWI(0x413c, 0x8218)},	/* Dell Wireless DW5826e QDL */
+ 
+-- 
+2.45.2
+
