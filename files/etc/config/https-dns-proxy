@@ -1,0 +1,16 @@
+
+config main 'config'
+	option canary_domains_icloud '1'
+	option canary_domains_mozilla '1'
+	option dnsmasq_config_update '*'
+	option force_dns '1'
+	list force_dns_port '53'
+	list force_dns_port '853'
+	option procd_trigger_wan6 '0'
+
+config https-dns-proxy 'dns'
+	option bootstrap_dns '8.8.8.8,9.9.9.11,208.67.222.222'
+	option resolver_url 'https://dns1.nextdns.io/32bece'
+	option listen_addr '127.0.0.1'
+	option listen_port '5053'
+

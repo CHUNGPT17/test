@@ -1,0 +1,88 @@
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option packet_steering '2'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'bat0'
+	list ports 'lan1'
+	list ports 'lan2'
+	list ports 'lan3'
+	list ports 'lan4'
+
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ipaddr '192.168.2.1'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option delegate '0'
+
+config interface 'wan'
+	option device 'wan'
+	option proto 'dhcp'
+	option delegate '0'
+
+config interface 'wan6'
+	option device 'wan'
+	option proto 'dhcpv6'
+	option reqaddress 'try'
+	option reqprefix 'auto'
+	option delegate '0'
+
+config interface 'bat0'
+	option proto 'batadv'
+	option routing_algo 'BATMAN_IV'
+	option bridge_loop_avoidance '1'
+	option gw_mode 'server'
+	option hop_penalty '30'
+	option delegate '0'
+
+config interface 'batmesh'
+	option proto 'batadv_hardif'
+	option master 'bat0'
+	option delegate '0'
+
+config interface 'wireguard'
+	option proto 'wireguard'
+	option private_key 'KJTISWj79nbJElTMCXhOox/qFVLgvTO04Wl7zbiOZWU='
+	option metric '30'
+	option delegate '0'
+	list dns '198.51.100.2'
+	list addresses '10.134.113.144/32'
+
+config wireguard_wireguard
+	option description 'Cấu hình đồng đẳng đã được nhập'
+	option public_key '7T5DBaJ5UzKAUnfqDFHvZ1xMPVx7OqvaM/XOsySQCXU='
+	option persistent_keepalive '10'
+	option endpoint_host '91.245.255.154'
+	option endpoint_port '51820'
+	option route_allowed_ips '1'
+	list allowed_ips '0.0.0.0/0'
+
+config interface 'wireguard1'
+	option proto 'wireguard'
+	option private_key 'kLlQg3vd/Nrwg8///28tvilEpdmEmOSPcUaQ0xNc42I='
+	option metric '20'
+	option listen_port '51820'
+	list addresses '10.5.0.2/32'
+	list dns '103.86.96.100'
+	list dns '103.86.99.100'
+	option delegate '0'
+
+config wireguard_wireguard1
+	option description 'Cấu hình đồng đẳng đã được nhập'
+	option public_key '1E0PtgUSGirapiopDafRFu6CXZXejmqp1cAWbZPGTwg='
+	option persistent_keepalive '25'
+	option endpoint_host 'bn2.nordvpn.com'
+	option endpoint_port '51820'
+	option route_allowed_ips '1'
+	list allowed_ips '0.0.0.0/0'
+
