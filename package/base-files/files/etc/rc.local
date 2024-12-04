@@ -2,6 +2,7 @@
 # the system init finished. By default this file does nothing.
 ipset -N youtube hash:ip
 ipset create VN hash:net
+while read ip; do ipset add VN $ip; done < /etc/abc.txt
 service dnsmasq restart
 mwan3 restart
 exit 0
