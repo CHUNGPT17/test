@@ -1,6 +1,7 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 ipset -N youtube hash:ip
+ipset -N MXH_BANKING hash:ip
 ipset create VN hash:net
 while read ip; do ipset add VN $ip; done < /etc/abc.txt
 service dnsmasq restart
