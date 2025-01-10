@@ -212,7 +212,7 @@ detect_mac80211() {
 			set wireless.default_${name}.mode=ap
 			set wireless.default_${name}.ssid=OpenWrt
 			set wireless.default_${name}.encryption=psk2
-			set wireless.default_${name}.key=aaaaaaaa  
+			set wireless.default_${name}.key=66668888  
 			set wireless.default_${name}.macaddr=random
 			set wireless.default_${name}.disassoc_low_ack=0
 EOF
