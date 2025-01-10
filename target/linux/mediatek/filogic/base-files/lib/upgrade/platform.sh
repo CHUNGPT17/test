@@ -116,6 +116,7 @@ platform_do_upgrade() {
 	yuncore,ax835)
 		default_do_upgrade "$1"
 		;;
+  	cmcc,rax3000m-emmc-ubootlayout|\
 	glinet,gl-mt6000)
 		CI_KERNPART="kernel"
 		CI_ROOTPART="rootfs"
@@ -200,6 +201,9 @@ platform_check_image() {
 		}
 		return 0
 		;;
+  	cmcc,rax3000m-emmc-ubootlayout)
+		return 0
+		;;
 	*)
 		nand_do_platform_check "$board" "$1"
 		return $?
@@ -220,6 +224,7 @@ platform_copy_config() {
 		esac
 		;;
 	glinet,gl-mt6000|\
+ 	cmcc,rax3000m-emmc-ubootlayout|\
 	jdcloud,re-cp-03|\
 	ubnt,unifi-6-plus)
 		emmc_copy_config
