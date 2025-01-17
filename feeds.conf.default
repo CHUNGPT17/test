@@ -1,7 +1,7 @@
-src-git packages https://github.com/CHUNGSEV/luci-23.05.5.git;packages-23.05
-src-git luci https://github.com/CHUNGSEV/luci-23.05.5.git
-src-git routing https://git.openwrt.org/feed/routing.git^e351d1e623e9ef2ab78f28cb1ce8d271d28c902d
-src-git telephony https://git.openwrt.org/feed/telephony.git^98c8a5aa4624312ed758e2e2b6d4039050a1649d
+src-git packages https://github.com/CHUNGPT17/luci-23.05.5.git;packages
+src-git luci https://github.com/CHUNGSEV/luci-23.05.5.git;luci
+src-git routing https://github.com/CHUNGSEV/luci-23.05.5.git;routing
+src-git telephony https://github.com/CHUNGSEV/luci-23.05.5.git;telephony
 src-git modemfeed https://github.com/CHUNGSEV/modemfeed.git
 src-git detector https://github.com/CHUNGSEV/luci-app-internet-detector.git
 src-git passwall2 https://github.com/CHUNGSEV/X.git;passwall2
