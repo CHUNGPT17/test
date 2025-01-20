@@ -1,16 +1,16 @@
-From caab1c441c90050d2318f9e00ecc108aa5766f90 Mon Sep 17 00:00:00 2001
+From 1e03c6b38ccd335145c9b0b4c266b6d216245f25 Mon Sep 17 00:00:00 2001
 From: CHUNGSEV <chung24091990@gmail.com>
-Date: Mon, 20 Jan 2025 02:08:57 +0000
+Date: Mon, 20 Jan 2025 02:51:07 +0000
 Subject: [PATCH] add driver card 4G LONGSUNG
 
 ---
- qmi_wwan.c | 2 ++
+ drivers/net/usb/qmi_wwan.c | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/qmi_wwan.c b/qmi_wwan.c
+diff --git a/drivers/net/usb/qmi_wwan.c b/drivers/net/usb/qmi_wwan.c
 index ee18f68..8d92a84 100644
---- a/qmi_wwan.c
-+++ b/qmi_wwan.c
+--- a/drivers/net/usb/qmi_wwan.c
++++ b/drivers/net/usb/qmi_wwan.c
 @@ -1385,6 +1385,8 @@ static const struct usb_device_id products[] = {
  	{QMI_FIXED_INTF(0x1c9e, 0x9801, 3)},	/* Telewell TW-3G HSPA+ */
  	{QMI_FIXED_INTF(0x1c9e, 0x9803, 4)},	/* Telewell TW-3G HSPA+ */
