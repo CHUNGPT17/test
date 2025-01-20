@@ -45,7 +45,7 @@ Acked-by: Bjørn Mork <bjorn@mork.no>
 Signed-off-by: David S. Miller <davem@davemloft.net>
 ---
  drivers/net/usb/qmi_wwan.c | 1 +
- 1 file changed, 1 insertion(+)
+ 1 file changed, 3 insertion(+)
 
 --- a/drivers/net/usb/qmi_wwan.c
 +++ b/drivers/net/usb/qmi_wwan.c
