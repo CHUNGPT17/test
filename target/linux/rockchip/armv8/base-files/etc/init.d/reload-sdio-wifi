@@ -1,0 +1,15 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+boot() {
+	case "$(board_name)" in
+	ariaboard,photonicat)
+		( sleep 15s; wifi; ) &
+		;;
+	armsom,sige3|\
+	firefly,rk3568-roc-pc)
+		( sleep 60s; wifi; ) &
+		;;
+	esac
+}
