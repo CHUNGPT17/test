@@ -95,8 +95,16 @@ define U-Boot/rockpro64-rk3399
     pine64_rockpro64
 endef
 
+define U-Boot/nanopi-r5s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=NanoPi R5S
+  BUILD_DEVICES:= \
+    friendlyarm_nanopi-r5s
+endef
+
 UBOOT_TARGETS := \
   nanopi-r4s-rk3399 \
+  nanopi-r5s-rk3568 \
   rock-pi-4-rk3399 \
   rockpro64-rk3399 \
   nanopi-r2c-rk3328 \
