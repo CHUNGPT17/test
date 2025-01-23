@@ -15,6 +15,14 @@ define Device/firefly_roc-rk3328-cc
 endef
 TARGET_DEVICES += firefly_roc-rk3328-cc
 
+define Device/friendlyarm_nanopi-r5s
+  DEVICE_VENDOR := FriendlyARM
+  DEVICE_MODEL := NanoPi R5S
+  SOC := rk3568
+  DEVICE_PACKAGES := kmod-r8169
+endef
+TARGET_DEVICES += friendlyarm_nanopi-r5s
+
 define Device/friendlyarm_nanopi-r2c
   DEVICE_VENDOR := FriendlyARM
   DEVICE_MODEL := NanoPi R2C
