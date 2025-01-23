@@ -50,6 +50,8 @@ generate_static_network() {
 				delete network.globals
 				set network.globals='globals'
 				set network.globals.ula_prefix='auto'
+				set network.globals.packet_steering='1'
+				set firewall.@defaults[0].flow_offloading='1'
 			EOF
 		}
 
@@ -311,8 +313,9 @@ generate_static_system() {
 	uci -q batch <<-EOF
 		delete system.@system[0]
 		add system system
-		set system.@system[-1].hostname='ImmortalWrt'
-		set system.@system[-1].timezone='UTC'
+		set system.@system[-1].hostname='OpenWrt'
+		set system.@system[-1].timezone='<+07>-7'
+		set system.@system[-1].zonename='Asia/Ho Chi Minh'
 		set system.@system[-1].ttylogin='0'
 		set system.@system[-1].log_size='64'
 		set system.@system[-1].urandom_seed='0'
