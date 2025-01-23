@@ -1,6 +1,6 @@
-src-git packages https://github.com/immortalwrt/packages.git^9d567f8ed5f99833e4bffe734e047d0a01b57ce5
-src-git luci https://github.com/immortalwrt/luci.git^d4189db0d76c02e24087298327ec40a59fcfb2aa
-src-git routing https://github.com/openwrt/routing.git^e351d1e623e9ef2ab78f28cb1ce8d271d28c902d
-src-git telephony https://github.com/openwrt/telephony.git^98c8a5aa4624312ed758e2e2b6d4039050a1649d
+src-git packages https://github.com/CHUNGPT17/luci-23.05.5.git;packages-immortwrt
+src-git luci https://github.com/CHUNGSEV/luci-23.05.5.git;luci-immortwrt
+src-git routing https://github.com/CHUNGSEV/luci-23.05.5.git;routing-immortwrt
+src-git telephony https://github.com/CHUNGSEV/luci-23.05.5.git;telephony-immortwrt
 src-git passwall2 https://github.com/CHUNGSEV/X.git;passwall2
 src-git x https://github.com/CHUNGSEV/luci.git;com.x-wrt
