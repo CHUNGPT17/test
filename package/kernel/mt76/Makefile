@@ -250,7 +250,6 @@ endef
 
 define KernelPackage/mt7981-firmware
   $(KernelPackage/mt76-default)
-  DEPENDS:=@TARGET_mediatek_filogic
   TITLE:=MediaTek MT7981 firmware
 endef
 
