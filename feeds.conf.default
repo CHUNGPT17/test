@@ -1,6 +1,8 @@
-src-git packages https://github.com/CHUNGPT17/luci-23.05.5.git;packages-immortwrt
-src-git luci https://github.com/CHUNGSEV/luci-23.05.5.git;luci-immortwrt
-src-git routing https://github.com/CHUNGSEV/luci-23.05.5.git;routing-immortwrt
-src-git telephony https://github.com/CHUNGSEV/luci-23.05.5.git;telephony-immortwrt
+src-git packages https://github.com/CHUNGPT17/luci-23.05.5.git;packages
+src-git luci https://github.com/CHUNGSEV/luci-23.05.5.git;luci
+src-git routing https://github.com/CHUNGSEV/luci-23.05.5.git;routing
+src-git telephony https://github.com/CHUNGSEV/luci-23.05.5.git;telephony
+src-git modemfeed https://github.com/CHUNGSEV/modemfeed.git
+src-git detector https://github.com/CHUNGSEV/luci-app-internet-detector.git
 src-git passwall2 https://github.com/CHUNGSEV/X.git;passwall2
 src-git x https://github.com/CHUNGSEV/luci.git;com.x-wrt
