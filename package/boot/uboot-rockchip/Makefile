@@ -95,6 +95,78 @@ define U-Boot/rockpro64-rk3399
     pine64_rockpro64
 endef
 
+# RK3568 boards
+
+define U-Boot/rk3568/Default
+  BUILD_SUBTARGET:=armv8
+  DEPENDS:=+PACKAGE_u-boot-$(1):trusted-firmware-a-rk3568
+  ATF:=$(RK3568_ATF)
+  TPL:=$(RK3568_TPL)
+endef
+
+define U-Boot/fastrhino-r66s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=FastRhino R66S
+  BUILD_DEVICES:= \
+    lunzn_fastrhino-r66s
+endef
+
+define U-Boot/fastrhino-r68s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=FastRhino R68S
+  BUILD_DEVICES:= \
+    lunzn_fastrhino-r68s
+endef
+
+define U-Boot/lyt-t68m-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=LYT T68M
+  BUILD_DEVICES:= \
+    lyt_t68m
+endef
+
+define U-Boot/mrkaio-m68s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=Mrkaio M68S
+  BUILD_DEVICES:= \
+    ezpro_mrkaio-m68s
+endef
+
+define U-Boot/nanopi-r5c-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=NanoPi R5C
+  BUILD_DEVICES:= \
+    friendlyarm_nanopi-r5c
+endef
+
+define U-Boot/nanopi-r5s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=NanoPi R5S
+  BUILD_DEVICES:= \
+    friendlyarm_nanopi-r5s
+endef
+
+define U-Boot/photonicat-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=Ariaboard Photonicat
+  BUILD_DEVICES:= \
+    ariaboard_photonicat
+endef
+
+define U-Boot/roc-pc-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=Station P2
+  BUILD_DEVICES:= \
+    firefly_roc-rk3568-pc
+endef
+
+define U-Boot/sige3-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=Sige3
+  BUILD_DEVICES:= \
+    armsom_sige3
+endef
+
 UBOOT_TARGETS := \
   nanopi-r4s-rk3399 \
   rock-pi-4-rk3399 \
