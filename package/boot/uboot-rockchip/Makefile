@@ -175,8 +175,17 @@ UBOOT_TARGETS := \
   nanopi-r2s-rk3328 \
   orangepi-r1-plus-rk3328 \
   orangepi-r1-plus-lts-rk3328 \
-  roc-cc-rk3328
-
+  roc-cc-rk3328 \
+  rock-pi-e-rk3328 \
+  fastrhino-r66s-rk3568 \
+  fastrhino-r68s-rk3568 \
+  lyt-t68m-rk3568 \
+  mrkaio-m68s-rk3568 \
+  nanopi-r5c-rk3568 \
+  nanopi-r5s-rk3568 \
+  photonicat-rk3568 \
+  roc-pc-rk3568 \
+  sige3-rk3568
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
 UBOOT_MAKE_FLAGS += \
