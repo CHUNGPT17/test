@@ -95,6 +95,13 @@ define U-Boot/rockpro64-rk3399
     pine64_rockpro64
 endef
 
+define U-Boot/nanopi-r5s-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=NanoPi R5S
+  BUILD_DEVICES:= \
+    friendlyarm_nanopi-r5s
+endef
+
 UBOOT_TARGETS := \
   nanopi-r4s-rk3399 \
   rock-pi-4-rk3399 \
@@ -103,6 +110,7 @@ UBOOT_TARGETS := \
   nanopi-r2s-rk3328 \
   orangepi-r1-plus-rk3328 \
   orangepi-r1-plus-lts-rk3328 \
+  nanopi-r5s-rk3568 \
   roc-cc-rk3328
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
